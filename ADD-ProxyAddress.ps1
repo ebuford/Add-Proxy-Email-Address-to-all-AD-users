@@ -14,7 +14,7 @@ $users = Get-Aduser -Filter * -ResultSetSize $null
 
 foreach ($user in $users) 
 {
-    $ProxyAddress = "smtp:" + $user.'SamAccountName' + 'Corp.ExchangeNerd.com'
+    $ProxyAddress = "smtp:" + $user.'SamAccountName' + 'Corp.Contoso.com'
     Set-ADUser -identity $User.'sAMAccountName' -Add @{ProxyAddresses = $ProxyAddress}
 
 }
